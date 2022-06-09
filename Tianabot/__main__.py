@@ -82,13 +82,20 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-*Hᴇʟʟᴏ {} * [!]({})
 ───────────────────────
-× *I'ᴍ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
-× *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
-───────────────────────
-× *Uᴘᴛɪᴍᴇ:* `{}`
-× `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
+ Konichiwa {}.
+*ʙᴏᴋᴜ ᴡᴀ ʜᴏʀɪ-ᴋʏᴏᴜᴋᴏ ɴᴏ ᴋᴀʀᴇꜱʜɪ ᴅᴇꜱᴜ
+━━━━━━━━━━━━━━━━━━━━━
+ʙᴏᴋᴜ ɴᴏ [Iȥυɱι Mιყαɱυɾα](http://t.me/MiyamuraXProBot) ,
+ᴀɴɪᴍᴇ-ᴛʜᴇᴍᴇ ʙᴀꜱᴇᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴀɴᴅ ʙᴏʏꜰʀɪᴇɴᴅ ᴏꜰ ʜᴏʀɪ ᴋʏᴏᴜᴋᴏ ✨
+┏━━━━━━━━━━━━━━━━━━━━
+× *ᴀᴡᴀᴋᴇ ꜱɪɴᴄᴇ:* {}
+× {} *ᴛᴇᴀᴍᴍᴀᴛᴇꜱ. ᴀᴄʀᴏꜱꜱ* {} *ɢʀᴏᴜᴘ ᴄʜᴀᴛꜱ.*
+┗━━━━━━━━━━━━━━━━━━━━ 
+[ꜱᴜᴘᴘᴏʀᴛ](https://t.me/izumi_supersupport) | [ᴜᴘᴅᴀᴛᴇꜱ](https://t.me/izumi_superupdates)
+━━━━━━━━━━━━━━━━━━━━━
+ᴘᴏᴡᴇʀᴇᴅ ʙʏ :  [V๏ɪ፝֟𝔡 ɴᴇᴛᴡᴏʀᴋ](https://t.me/voidxnetwork)
+*ᴏᴘᴇɴ /ʜᴇʟᴘ ᴛᴏ ᴋɴᴏᴡ ᴡʜᴀᴛ ɪ ᴀᴍ ᴄᴀᴘᴀʙʟᴇ ᴏꜰ !*[.](https://telegra.ph/file/a480ee670f5c08e167781.mp4)
 ───────────────────────"""
 
 buttons = [
@@ -97,14 +104,14 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="👩‍💻 𝙄𝙣𝙛𝙤", callback_data="about_"),
-        InlineKeyboardButton(text="𝙊𝙬𝙣𝙚𝙧 👨‍✈️", url=f"https://t.me/{OWNER_USERNAME}"),
+        InlineKeyboardButton(text="𝙊𝙬𝙣𝙚𝙧 👨‍✈️", url=f"https://t.me/izumitachibana_08"),
     ],
    [
-        InlineKeyboardButton(text="📇 𝙐𝙥𝙙𝙖𝙩𝙚𝙨", url=f"http://t.me/{UPDATE_CHANNEL}"),
-        InlineKeyboardButton(text="𝙎𝙪𝙥𝙥𝙤𝙧𝙩 🫂", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="📇 𝙐𝙥𝙙𝙖𝙩𝙚𝙨", url=f"http://t.me/izumixupdates"),
+        InlineKeyboardButton(text="𝙎𝙪𝙥𝙥𝙤𝙧𝙩 🫂", url=f"https://t.me/izumixsupport"),
     ],
     [  
-        InlineKeyboardButton(text="➕️ 𝘼𝙙𝙙 𝙢𝙚 𝙩𝙤 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥 ➕️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true"),
+        InlineKeyboardButton(text="➕️ 𝘼𝙙𝙙 𝙢𝙚 𝙩𝙤 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥 ➕️", url=f"https://t.me/miyamuraxprobot?startgroup=true"),
     ], 
     
 ]
@@ -233,22 +240,27 @@ def start(update: Update, context: CallbackContext):
     else:
           first_name = update.effective_user.first_name
           update.effective_message.reply_photo(
-                TIANA_IMG, caption="""*Hᴇʟʟᴏ {} !*
-───────────────────
-× *I'ᴍ Aɴɪᴍᴇ-Tʜᴇᴍᴇ Gʀᴏᴜᴘ Mᴀɴᴀɢᴇᴍᴇɴᴛ Bᴏᴛ*
-× *I'ᴍ Vᴇʀʏ Fᴀꜱᴛ Aɴᴅ Mᴏʀᴇ Eꜰꜰɪᴄɪᴇɴᴛ I Pʀᴏᴠɪᴅᴇ Aᴡᴇꜱᴏᴍᴇ Fᴇᴀᴛᴜʀᴇꜱ!*
-───────────────────
-× *Uᴘᴛɪᴍᴇ:* `{}`
-× `{}` *Uꜱᴇʀ, Aᴄʀᴏꜱꜱ* `{}` *Cʜᴀᴛꜱ.*
-───────────────────""".format(
+                TIANA_IMG, caption=""" Konichiwa {}.
+*ʙᴏᴋᴜ ᴡᴀ ʜᴏʀɪ-ᴋʏᴏᴜᴋᴏ ɴᴏ ᴋᴀʀᴇꜱʜɪ ᴅᴇꜱᴜ
+━━━━━━━━━━━━━━━━━━━━━
+ʙᴏᴋᴜ ɴᴏ [Iȥυɱι Mιყαɱυɾα](http://t.me/MiyamuraXProBot) ,
+ᴀɴɪᴍᴇ-ᴛʜᴇᴍᴇ ʙᴀꜱᴇᴅ ɢʀᴏᴜᴘ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ ʙᴏᴛ ᴀɴᴅ ʙᴏʏꜰʀɪᴇɴᴅ ᴏꜰ ʜᴏʀɪ ᴋʏᴏᴜᴋᴏ ✨
+┏━━━━━━━━━━━━━━━━━━━━
+× *ᴀᴡᴀᴋᴇ ꜱɪɴᴄᴇ:* {}
+× {} *ᴛᴇᴀᴍᴍᴀᴛᴇꜱ. ᴀᴄʀᴏꜱꜱ* {} *ɢʀᴏᴜᴘ ᴄʜᴀᴛꜱ.*
+┗━━━━━━━━━━━━━━━━━━━━ 
+[ꜱᴜᴘᴘᴏʀᴛ](https://t.me/izumi_supersupport) | [ᴜᴘᴅᴀᴛᴇꜱ](https://t.me/izumi_superupdates)
+━━━━━━━━━━━━━━━━━━━━━
+ᴘᴏᴡᴇʀᴇᴅ ʙʏ :  [V๏ɪ፝֟𝔡 ɴᴇᴛᴡᴏʀᴋ](https://t.me/voidxnetwork)
+*ᴏᴘᴇɴ /ʜᴇʟᴘ ᴛᴏ ᴋɴᴏᴡ ᴡʜᴀᴛ ɪ ᴀᴍ ᴄᴀᴘᴀʙʟᴇ ᴏꜰ !*""".format(
                     escape_markdown(first_name),
                     escape_markdown(uptime),
                     sql.num_users(),
                     sql.num_chats()),
                 reply_markup=InlineKeyboardMarkup(
                  [
-                  [InlineKeyboardButton(text="📄 Source", url="https://github.com/prince-botz/tianabot"), 
-                   InlineKeyboardButton(text="🫂 Support", url=f"https://t.me/{SUPPORT_CHAT}")]
+                  [InlineKeyboardButton(text="Void Network", url="https://voidxnetwork"), 
+                   InlineKeyboardButton(text="🫂 Support", url=f"https://t.me/izumixsupport")]
                  ]
               ),
                 parse_mode=ParseMode.MARKDOWN,              
@@ -395,15 +407,17 @@ def tiana_callback_handler(update, context):
         )
     elif query.data == "tiana_help":
         query.message.edit_text(
-            text=f"""*Nᴇᴡ  Tᴏ  {BOT_NAME}!  Hᴇʀᴇ  Is  Tʜᴇ  Qᴜɪᴄᴋ  Sᴛᴀʀᴛ  Gᴜɪᴅᴇ  Wʜɪᴄʜ  Wɪʟʟ  Hᴇʟᴘ  Yᴏᴜ  Tᴏ  Uɴᴅᴇʀsᴛᴀɴᴅ  Wʜᴀᴛ  Is  {BOT_NAME}  Aɴᴅ  Hᴏᴡ  Tᴏ  Usᴇ  Iᴛ.
-
+            text=f"""*Nᴇᴡ  Tᴏ  Iȥυɱι Mιყαɱυɾα!  
+Hᴇʀᴇ  Is  Tʜᴇ  Qᴜɪᴄᴋ  Sᴛᴀʀᴛ  Gᴜɪᴅᴇ  Wʜɪᴄʜ  Wɪʟʟ  Hᴇʟᴘ  Yᴏᴜ  Tᴏ  Uɴᴅᴇʀsᴛᴀɴᴅ  
+Wʜᴀᴛ  Is  Iȥυɱι Mιყαɱυɾα  Aɴᴅ
+Hᴏᴡ  Tᴏ  Usᴇ  Iᴛ.
 Cʟɪᴄᴋ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴ  Tᴏ  Aᴅᴅ  Bᴏᴛ  Iɴ  Yᴏᴜʀ  Gʀᴏᴜᴘ. Bᴀsɪᴄ  Tᴏᴜʀ  Sᴛᴀʀᴛᴇᴅ  Tᴏ  Kɴᴏᴡ  Aʙᴏᴜᴛ  Hᴏᴡ  Tᴏ  Usᴇ  Mᴇ*""",
             parse_mode=ParseMode.MARKDOWN,
             reply_markup=InlineKeyboardMarkup(
-              [[InlineKeyboardButton(text="𝙎𝙚𝙩𝙪𝙥 𝙏𝙪𝙩𝙤𝙧𝙞𝙖𝙡 🎥", callback_data="tiana_vida")],
-               [InlineKeyboardButton(text="➕️ 𝘼𝙙𝙙 𝙢𝙚 𝙩𝙤 𝙔𝙤𝙪𝙧 𝙂𝙧𝙤𝙪𝙥 ➕️", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],       
-                [InlineKeyboardButton(text="🔙 𝘽𝙖𝙘𝙠", callback_data="tiana_"),
-                 InlineKeyboardButton(text="➡️", callback_data="tiana_helpa")]
+              [[InlineKeyboardButton(text="Void Network", url=f"https//t.mevoidxnetwork")],
+               [InlineKeyboardButton(text=" Invite me to your group ", url=f"https://t.me/miyamuraxprobot?startgroup=true")],       
+                [InlineKeyboardButton(text="Owner ", url="https://izumitachibana_08"),
+                 InlineKeyboardButton(text="Support ", url="https://t.me/izumixsupport")]
               ]
             ),
         )
@@ -413,8 +427,8 @@ Cʟɪᴄᴋ  Bᴇʟᴏᴡ  Bᴜᴛᴛᴏɴ  Tᴏ  Aᴅᴅ  Bᴏᴛ  Iɴ  Yᴏᴜ
 
 Bᴇғᴏʀᴇ  Wᴇ  Gᴏ,  I  Nᴇᴇᴅ  Aᴅᴍɪɴ  Pᴇʀᴍɪssɪᴏɴs  Iɴ  Tʜɪs  Cʜᴀᴛ  Tᴏ  Wᴏʀᴋ  Pʀᴏᴘᴇʀʟʏ.
 1). Cʟɪᴄᴋ  Mᴀɴᴀɢᴇ  Gʀᴏᴜᴘ.
-2). Gᴏ  Tᴏ  Aᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs  Aɴᴅ  Aᴅᴅ</b>  {BOT_USERNAME}  <b>As  Aᴅᴍɪɴ.
-3). Gɪᴠɪɴɢ  Fᴜʟʟ  Pᴇʀᴍɪssɪᴏɴs  Mᴀᴋᴇ  Tɪᴀɴᴀ  Fᴜʟʟʏ  Usᴇғᴜʟ</b>""",
+2). Gᴏ  Tᴏ  Aᴅᴍɪɴɪsᴛʀᴀᴛᴏʀs  Aɴᴅ  Aᴅᴅ</b>  @MiyamuraXProBot  <b>As  Aᴅᴍɪɴ.
+3). Gɪᴠɪɴɢ  Fᴜʟʟ  Pᴇʀᴍɪssɪᴏɴs  Mᴀᴋᴇ  Izumi  Fᴜʟʟʏ  Usᴇғᴜʟ</b>""",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
               [[InlineKeyboardButton(text="⬅️", callback_data="tiana_help"),
@@ -426,7 +440,7 @@ Bᴇғᴏʀᴇ  Wᴇ  Gᴏ,  I  Nᴇᴇᴅ  Aᴅᴍɪɴ  Pᴇʀᴍɪssɪᴏɴs  
         query.message.edit_text(
             text="""*Cᴏɴɢʀᴀɢᴜʟᴀᴛɪᴏɴs,  Tʜɪꜱ  Bᴏᴛ  Nᴏᴡ  Rᴇᴀᴅʏ  Tᴏ  Mᴀɴᴀɢᴇ  Yᴏᴜʀ  Gʀᴏᴜᴘ
 
-Hᴇʀᴇ  Aʀᴇ  Sᴏᴍᴇ  Essᴇɴᴛɪᴀʟᴛ  Tᴏ  Tʀʏ  Oɴ Tɪᴀɴᴀ.
+Hᴇʀᴇ  Aʀᴇ  Sᴏᴍᴇ  Essᴇɴᴛɪᴀʟᴛ  Tᴏ  Tʀʏ  Oɴ Izumi.
 
 ×  Aᴅᴍɪɴ  Tᴏᴏʟs
 ʙᴀsɪᴄ  ᴀᴅᴍɪɴ  ᴛᴏᴏʟs  ʜᴇʟᴘ  ʏᴏᴜ  ᴛᴏ  ᴘʀᴏᴛᴇᴄᴛ  ᴀɴᴅ  ᴘᴏᴡᴇʀᴜᴘ  ʏᴏᴜʀ  ɢʀᴏᴜᴘ
